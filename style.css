@@ -1,0 +1,202 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap');
+
+/* General styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: #3e7c85; /* Sky blue */
+  color: #ffffff;
+  position: relative;
+}
+#socialMedia {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+  border-radius: 10px; /* Rounded edges */
+  padding: 8px 12px;
+  font-size: 0.9em;
+  text-align: center;
+  color: #ffffff;
+}
+
+#socialMedia p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+#socialMedia a {
+  color: #ffeb3b; /* Bright yellow for links */
+  text-decoration: none;
+}
+
+#socialMedia a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile View Styling */
+@media screen and (max-width: 768px) {
+  #socialMedia {
+    font-size: 0.8em;
+    padding: 6px 10px;
+    bottom: 5px;
+    right: 5px;
+  }
+}
+
+/* Hidden elements */
+.hidden {
+  display: none;
+}
+
+/* Game canvas styling */
+#gameCanvas {
+  border: 2px solid #000;
+}
+
+/* Home Screen Styling */
+#home {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  color: #ff9800; /* Bright orange */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  margin: -10px 0 20px;
+}
+
+.tip-box {
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent white */
+  border: 2px solid #ffffff; /* White border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.tip-message {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin-top: 15px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* High Score Styling */
+#highScore {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #ffeb3b;
+}
+
+/* End Screen Styling */
+#endScreen {
+  text-align: center;
+  color: white;
+}
+
+#endScreen button {
+  margin-top: 10px;
+}
+
+/* Crash text animation */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+#crashText {
+  color: red;
+  font-size: 1.5em;
+  animation: shake 0.5s ease infinite;
+}
+
+/* Win Text Styling */
+#winText {
+  color: #00FF00; /* Green for winning */
+  font-size: 1.5em;
+  animation: bounce 1s ease infinite;
+}
+
+/* Bounce animation for win text */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Confetti Animation */
+@keyframes confetti-fall {
+  from {
+    transform: translateY(-200px) rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffeb3b; /* Yellow confetti */
+  border-radius: 50%;
+  animation: confetti-fall 2s linear infinite;
+}
+
+.confetti:nth-child(2) {
+  background-color: #ff5722; /* Orange confetti */
+  animation-delay: 0.2s;
+}
+
+.confetti:nth-child(3) {
+  background-color: #4caf50; /* Green confetti */
+  animation-delay: 0.4s;
+}
+
+.confetti:nth-child(4) {
+  background-color: #2196f3; /* Blue confetti */
+  animation-delay: 0.6s;
+}
+
+.confetti:nth-child(5) {
+  background-color: #e91e63; /* Pink confetti */
+  animation-delay: 0.8s;
+}
