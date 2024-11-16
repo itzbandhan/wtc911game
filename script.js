@@ -229,3 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
     endScreen.classList.add("hidden");
   }
 });
+
+
+
+// Follow for more projects
